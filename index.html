@@ -8,20 +8,50 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous">
 
     <!-- GC Design System -->
-    <link rel="stylesheet" href="https://cdn.design-system.alpha.canada.ca/@cdssnc/gcds-components@latest/dist/gcds/gcds.css">
-    <script nomodule src="https://cdn.design-system.alpha.canada.ca/@cdssnc/gcds-components@latest/dist/gcds/gcds.js"></script>
+    <link rel="stylesheet" href="https://cdn.design-system.alpha.canada.ca/@cdssnc/gcds-components@0.26.2/dist/gcds/gcds.css">
+    <script type="module" src="https://cdn.design-system.alpha.canada.ca/@cdssnc/gcds-components@0.26.2/dist/gcds/gcds.esm.js"></script>
+    <script nomodule src="https://cdn.design-system.alpha.canada.ca/@cdssnc/gcds-components@0.26.2/dist/gcds/gcds.js"></script>
 </head>
 <body>
 
-    <!-- Web component code (HTML, Angular, Vue) -->
-<gcds-input
-input-id="input-default"
-label="Label"
-name="example-default"
-hint="Hint / example message."
-disabled
+    <h2>Disabled input demo</h2>
+
+    <gcds-input
+  input-id="input-default"
+  label="Label"
+  name="example-default"
+  hint="Hint / example message."
+  value="this is a test"
+>
+</gcds-input>
+
+    <gcds-input
+  input-id="input-default"
+  label="Label"
+  name="example-default"
+  hint="Hint / example message."
+  disabled
+  value="this is a test"
 >
 </gcds-input>
     
+
+<h2>Read-only field</h2>
+
+
+<div class="gcds-input-wrapper" style="width: 100%; max-width: 500px;">
+    <gcds-label label-for="input-default" lang="en" class="sc-gcds-label-h sc-gcds-label-s hydrated" id="label-for-input-default">
+      <label for="input-default" class="gcds-label sc-gcds-label">
+        <span class="sc-gcds-label">Label</span>
+      </label>
+    </gcds-label>
+  
+    <gcds-hint hint-id="input-default" id="hint-input-default" class="hydrated">
+      Hint / example message.
+    </gcds-hint>
+  
+    <input type="text" value="this is a test" readonly aria-describedby="hint-input-default" class="" id="input-default" name="example-default" aria-labelledby="label-for-input-default" aria-invalid="false" part="input" style="width: 100%; height: 50px; font-size: 18px;">
+  </div>
+  
 </body>
 </html>
